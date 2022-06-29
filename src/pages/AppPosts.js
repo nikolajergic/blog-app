@@ -9,13 +9,11 @@ function AppPosts() {
 
     useEffect(() => {
         async function getPosts() {
-          try {
-            const post = await PostsServices.getAll()
+        
+            const posts = await PostsServices.getAll()
 
-            setPosts(post)
-          } catch (error) {
-            console.log(error)
-          }
+            setPosts(posts)
+          
         } 
 
         getPosts()

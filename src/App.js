@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import AppPosts from './pages/AppPosts';
+import SinglePost from './pages/SinglePost';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           <Switch>
           <Route exact path='/posts'>
             <AppPosts />
+          </Route>
+          <Route exact path='/post/:id'>
+            <SinglePost />
           </Route>
           </Switch>
       </Router>
