@@ -1,10 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import AppPosts from './pages/AppPosts';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+     <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/posts'>Posts</Link>
+            </li>
+          </ul>
+        </nav>
+
+          <Switch>
+          <Route exact path='/posts'>
+            <AppPosts />
+          </Route>
+          </Switch>
+      </Router>
     </div>
   );
 }
