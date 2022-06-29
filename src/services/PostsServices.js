@@ -21,7 +21,7 @@ class PostsServices {
 
   async get(id) {
     try {
-      const { data } = await this.client.get('posts/${id}');
+      const { data } = await this.client.get(`/post/${id}`);
 
       return data;
     } catch (error) {

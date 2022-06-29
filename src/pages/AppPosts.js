@@ -25,7 +25,7 @@ function AppPosts() {
         key={post.id}
         id={post.id}
         title={post.title}
-        text={post.title}
+        text={post.text}
       />
       )
       )

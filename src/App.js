@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import AppPosts from './pages/AppPosts';
 import SinglePost from './pages/SinglePost';
+import AddPost from './pages/AddPost';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <ul>
             <li>
               <Link to='/posts'>Posts</Link>
+            </li>
+            <li>
+              <Link to='/add'>Add post</Link>
             </li>
           </ul>
         </nav>
@@ -28,6 +32,10 @@ function App() {
           <Route exact path='/post/:id'>
             <SinglePost />
           </Route>
+          <Route exact path='/add'>
+            <AddPost />
+            </Route>
+
           </Switch>
       </Router>
     </div>
