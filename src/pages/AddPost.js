@@ -21,6 +21,13 @@ function AddPost() {
         history.push('/posts');
       };
 
+      const handleReset = () => {
+        setNewPost({
+          title:'',
+          text:'',
+        });
+      };
+
       return(
         <div>
             <h1>Add Post</h1>
@@ -57,6 +64,9 @@ function AddPost() {
             />
             <button onClick={handleSubmit}>
                 Submit
+            </button>
+            <button onClick={handleReset}>
+                Reset
             </button>
         </form>
 

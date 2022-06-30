@@ -31,9 +31,9 @@ class PostsServices {
     return {};
   }
 
-  async add(newPosts) {
+  async add(newPost) {
     try {
-      const { data } = await this.client.post('posts', newPosts);
+      const { data } = await this.client.post('posts', newPost);
 
       return data;
     } catch (error) {
