@@ -14,11 +14,15 @@ function AddPost() {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
+        if (id) {
+          await PostsServices.edit(id, newPost);
 
-        await PostsServices.add(newPost);
-        
-    
+        } else {
+          await PostsServices.add(newPost);
+        }
+
         history.push('/posts');
+
       };
 
       const handleReset = () => {
@@ -62,9 +66,7 @@ function AddPost() {
             setNewPost({ ...newPost, text: target.value })
             }
             />
-            <button onClick={handleSubmit}>
-                Submit
-            </button>
+             <button>{id ? 'Edit' : 'Add Post'}</button>
             <button onClick={handleReset}>
                 Reset
             </button>

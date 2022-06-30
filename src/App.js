@@ -35,6 +35,10 @@ function App() {
           <Route exact path='/add'>
             <AddPost />
             </Route>
+            <Route exact path='/edit/:id'>
+              <AddPost />
+            </Route>
+          
 
           </Switch>
       </Router>

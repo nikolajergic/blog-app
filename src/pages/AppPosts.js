@@ -19,6 +19,13 @@ function AppPosts() {
         getPosts()
       }, [])
 
+      const handleEdit = () => {
+       
+
+        history.push('/edit/${id}')
+
+      };
+
       return (
       posts.map((post, id) => 
       <Post
@@ -26,6 +33,7 @@ function AppPosts() {
         id={post.id}
         title={post.title}
         text={post.text}
+        handleEdit={handleEdit}
       />
       )
       )
