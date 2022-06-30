@@ -30,6 +30,18 @@ class PostsServices {
 
     return {};
   }
+
+  async add(newPosts) {
+    try {
+      const { data } = await this.client.post('posts', newPosts);
+
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+
+    return null;
+  }
 }
 
 export default new PostsServices();

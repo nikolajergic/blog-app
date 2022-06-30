@@ -1,4 +1,6 @@
 import React from "react"
+import AddPost from "../pages/AddPost";
+
 function Post({id, title, text}) {
 
     return (
